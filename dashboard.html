@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Health Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-container">
+                <img src="heart-icon-transparent.png" alt="Heart Icon" class="logo-icon">
+            </div>
+            <div>
+                <h1 class="sidebar-title">Health Analytics</h1>
+                <p class="sidebar-subtitle">Dashboard</p>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link active">
+                <span class="nav-icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="prediction_history.html" class="nav-link">
+                <span class="nav-icon">📜</span>
+                <span>Prediction History</span>
+            </a>
+            <a href="reports.html" class="nav-link">
+                <span class="nav-icon">📄</span>
+                <span>Reports</span>
+            </a>
+            <a href="health_analytics.html" class="nav-link">
+                <span class="nav-icon">📈</span>
+                <span>Health Analytics</span>
+            </a>
+            <a href="recommendations.html" class="nav-link">
+                <span class="nav-icon">💡</span>
+                <span>Recommendations</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <p class="footer-title">AI-Powered Health</p>
+            <p class="footer-subtitle">Risk Assessment Tool</p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Health Assessment Dashboard</h1>
+                <p class="page-description">Do you have full, partial, or no medical reports available?</p>
+            </div>
+
+            <div class="card card-shadow">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <span class="icon">🏥</span>
+                        Quick Health Assessment
+                    </h2>
+                    <p class="card-description">Select your report status to receive an AI-powered health risk evaluation</p>
+                </div>
+                <div class="card-content">
+                    <div class="form-group">
+                        <label for="report-status" class="form-label">What medical reports do you have available?</label>
+                        <select id="report-status" class="form-select">
+                            <option value="">Select report status</option>
+                            <option value="full">Full medical reports</option>
+                            <option value="partial">Partial medical reports</option>
+                            <option value="none">No medical reports</option>
+                        </select>
+                    </div>
+
+                    <div id="additional-questions" class="hidden">
+                        <div class="form-group">
+                            <label for="age-group" class="form-label">What is your age group?</label>
+                            <select id="age-group" class="form-select">
+                                <option value="">Select your age group</option>
+                                <option value="18-34">18-34 years</option>
+                                <option value="35-44">35-44 years</option>
+                                <option value="45-54">45-54 years</option>
+                                <option value="55+">55+ years</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="activity-level" class="form-label">What is your physical activity level?</label>
+                            <select id="activity-level" class="form-select">
+                                <option value="">Select your activity level</option>
+                                <option value="low">Low (Sedentary, little to no exercise)</option>
+                                <option value="moderate">Moderate (Exercise 2-3 times per week)</option>
+                                <option value="high">High (Exercise 4+ times per week)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="smoking" class="form-label">Do you smoke?</label>
+                            <select id="smoking" class="form-select">
+                                <option value="">Select your smoking status</option>
+                                <option value="yes">Yes, I smoke regularly</option>
+                                <option value="occasionally">Occasionally</option>
+                                <option value="no">No, I don't smoke</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button id="generate-btn" class="btn btn-primary btn-large" disabled>
+                        <span id="btn-text">Generate Health Analysis</span>
+                        <span id="btn-loader" class="loader hidden"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card info-card">
+                <div class="card-content">
+                    <p class="info-text">
+                        <strong>How it works:</strong> Our AI-powered system analyzes your responses 
+                        to provide a personalized health risk assessment. After completing the questions, you'll receive detailed 
+                        insights, risk factors, and recommendations on the Health Analytics page.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="disclaimer">⚠️ AI-based prediction. Not medical advice. Always consult healthcare professionals.</p>
+           
+        </footer>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

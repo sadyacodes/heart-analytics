@@ -1,0 +1,195 @@
+<!--  <!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction History - Health Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-container">
+                <img src="heart-icon-transparent.png" alt="Heart Icon" class="logo-icon">
+            </div>
+            <div>
+                <h1 class="sidebar-title">Health Analytics</h1>
+                <p class="sidebar-subtitle">Dashboard</p>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link">
+                <span class="nav-icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="prediction_history.html" class="nav-link active">
+                <span class="nav-icon">📜</span>
+                <span>Prediction History</span>
+            </a>
+            <a href="reports.html" class="nav-link">
+                <span class="nav-icon">📄</span>
+                <span>Reports</span>
+            </a>
+            <a href="health_analytics.html" class="nav-link">
+                <span class="nav-icon">📈</span>
+                <span>Health Analytics</span>
+            </a>
+            <a href="recommendations.html" class="nav-link">
+                <span class="nav-icon">💡</span>
+                <span>Recommendations</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <p class="footer-title">AI-Powered Health</p>
+            <p class="footer-subtitle">Risk Assessment Tool</p>
+        </div>
+    </aside>
+
+   
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header-flex">
+                <div>
+                    <h1 class="page-title">
+                        <span class="icon">📜</span>
+                        Prediction History
+                    </h1>
+                    <p class="page-description">View your past health risk assessments and track changes over time</p>
+                </div>
+                <button id="clear-history-btn" class="btn btn-destructive hidden">
+                    <span>🗑️</span>
+                    Clear History
+                </button>
+            </div>
+
+            <div class="card card-shadow">
+                <div class="card-header">
+                    <h2 class="card-title">Assessment Records</h2>
+                    <p class="card-description" id="record-count">0 assessments recorded</p>
+                </div>
+                <div class="card-content">
+                    <div id="history-container"></div>
+                </div>
+            </div>
+
+            <div class="card info-card hidden" id="info-card">
+                <div class="card-content">
+                    <p class="info-text">
+                        <strong>Tracking Your Health:</strong> Regular assessments help you monitor 
+                        changes in your health risk profile over time. Compare your results to see how lifestyle changes impact 
+                        your overall health score.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="disclaimer">⚠️ AI-based prediction. Not medical advice. Always consult healthcare professionals.</p>
+          
+        </footer>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction History - Health Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-container">
+                <img src="heart-icon-transparent.png" alt="Heart Icon" class="logo-icon">
+            </div>
+            <div>
+                <h1 class="sidebar-title">Health Analytics</h1>
+                <p class="sidebar-subtitle">Dashboard</p>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link">
+                <span class="nav-icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="prediction_history.html" class="nav-link active">
+                <span class="nav-icon">📜</span>
+                <span>Prediction History</span>
+            </a>
+            <a href="reports.html" class="nav-link">
+                <span class="nav-icon">📄</span>
+                <span>Reports</span>
+            </a>
+            <a href="health_analytics.html" class="nav-link">
+                <span class="nav-icon">📈</span>
+                <span>Health Analytics</span>
+            </a>
+            <a href="recommendations.html" class="nav-link">
+                <span class="nav-icon">💡</span>
+                <span>Recommendations</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <p class="footer-title">AI-Powered Health</p>
+            <p class="footer-subtitle">Risk Assessment Tool</p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header-flex">
+                <div>
+                    <h1 class="page-title">
+                        <span class="icon">📜</span>
+                        Prediction History
+                    </h1>
+                    <p class="page-description">View your past health risk assessments and track changes over time</p>
+                </div>
+                <button id="clear-history-btn" class="btn btn-destructive hidden">
+                    <span>🗑️</span>
+                    Clear History
+                </button>
+            </div>
+
+            <div class="card card-shadow">
+                <div class="card-header">
+                    <h2 class="card-title">Assessment Records</h2>
+                    <p class="card-description" id="record-count">0 assessments recorded</p>
+                </div>
+                <div class="card-content">
+                    <div id="history-container"></div>
+                </div>
+            </div>
+
+            <div class="card info-card hidden" id="info-card">
+                <div class="card-content">
+                    <p class="info-text">
+                        <strong>Tracking Your Health:</strong> Regular assessments help you monitor 
+                        changes in your health risk profile over time. Compare your results to see how lifestyle changes impact 
+                        your overall health score.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="disclaimer">⚠️ AI-based prediction. Not medical advice. Always consult healthcare professionals.</p>
+          
+        </footer>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations - Health Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-container">
+                <img src="heart-icon-transparent.png" alt="Heart Icon" class="logo-icon">
+            </div>
+            <div>
+                <h1 class="sidebar-title">Health Analytics</h1>
+                <p class="sidebar-subtitle">Dashboard</p>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link">
+                <span class="nav-icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="prediction_history.html" class="nav-link">
+                <span class="nav-icon">📜</span>
+                <span>Prediction History</span>
+            </a>
+            <a href="reports.html" class="nav-link">
+                <span class="nav-icon">📄</span>
+                <span>Reports</span>
+            </a>
+            <a href="health_analytics.html" class="nav-link">
+                <span class="nav-icon">📈</span>
+                <span>Health Analytics</span>
+            </a>
+            <a href="recommendations.html" class="nav-link active">
+                <span class="nav-icon">💡</span>
+                <span>Recommendations</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <p class="footer-title">AI-Powered Health</p>
+            <p class="footer-subtitle">Risk Assessment Tool</p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">
+                    <span class="icon">💡</span>
+                    Health Recommendations
+                </h1>
+                <p class="page-description">Personalized lifestyle guidance to improve your heart health</p>
+            </div>
+
+            <div id="no-data-alert" class="alert hidden">
+                <span class="alert-icon">⚠️</span>
+                <p>No assessment data available. Please complete an assessment on the Dashboard to receive personalized recommendations.</p>
+            </div>
+
+            <div id="recommendations-content" class="hidden">
+                <!-- Risk Level Summary -->
+                <div class="card card-shadow">
+                    <div class="card-content">
+                        <div class="risk-summary-inline">
+                            <div>
+                                <p class="risk-label">Your Current Risk Level</p>
+                                <span id="risk-badge" class="badge">Low</span>
+                            </div>
+                            <p class="recommendations-intro">These recommendations are tailored to your risk profile and can help you improve your overall heart health.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="card card-shadow">
+                    <div class="card-header">
+                        <h2 class="card-title">Lifestyle Recommendations</h2>
+                        <p class="card-description">Explore recommendations by category</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="tabs">
+                            <div class="tabs-list">
+                                <button class="tab-trigger active" data-tab="diet">
+                                    <span>🍎</span>
+                                    Diet
+                                </button>
+                                <button class="tab-trigger" data-tab="exercise">
+                                    <span>💪</span>
+                                    Exercise
+                                </button>
+                                <button class="tab-trigger" data-tab="mental">
+                                    <span>🧠</span>
+                                    Mental Health
+                                </button>
+                                <button class="tab-trigger" data-tab="sleep">
+                                    <span>🌙</span>
+                                    Sleep
+                                </button>
+                            </div>
+
+                            <div class="tabs-content">
+                                <div id="diet-tab" class="tab-content active"></div>
+                                <div id="exercise-tab" class="tab-content"></div>
+                                <div id="mental-tab" class="tab-content"></div>
+                                <div id="sleep-tab" class="tab-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Important Notice -->
+                <div class="card info-card">
+                    <div class="card-content">
+                        <div class="notice-flex">
+                            <span class="notice-icon">❤️</span>
+                            <p class="info-text">
+                                <strong>Remember:</strong> These recommendations are general guidelines. 
+                                Always consult with your healthcare provider before making significant changes to your diet, exercise routine, 
+                                or lifestyle, especially if you have existing health conditions or are taking medications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="disclaimer">⚠️ AI-based prediction. Not medical advice. Always consult healthcare professionals.</p>
+           
+        </footer>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        
+        /* Deep maroon/burgundy color palette - #800000 theme */
+        --background: 0.15 0.08 15;
+        --foreground: 0.98 0.01 15;
+        
+        --card: 0.20 0.09 15;
+        --card-foreground: 0.98 0.01 15;
+        
+        --popover: 0.20 0.09 15;
+        --popover-foreground: 0.98 0.01 15;
+        
+        /* Primary: Deep burgundy/maroon (#800000) */
+        --primary: 0.45 0.20 15;
+        --primary-foreground: 0.98 0.01 15;
+        
+        --secondary: 0.28 0.10 15;
+        --secondary-foreground: 0.98 0.01 15;
+        
+        --muted: 0.25 0.09 15;
+        --muted-foreground: 0.70 0.03 15;
+        
+        --accent: 0.35 0.15 15;
+        --accent-foreground: 0.98 0.01 15;
+        
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.98 0.01 15;
+        
+        --border: 0.30 0.10 15;
+        --input: 0.30 0.10 15;
+        --ring: 0.45 0.20 15;
+        
+        --chart-1: 0.60 0.18 15;
+        --chart-2: 0.65 0.15 340;
+        --chart-3: 0.55 0.12 30;
+        --chart-4: 0.70 0.10 200;
+        --chart-5: 0.50 0.20 350;
+    }
+
+    .dark {
+        --background: 0.15 0.08 15;
+        --foreground: 0.98 0.01 15;
+        
+        --card: 0.20 0.09 15;
+        --card-foreground: 0.98 0.01 15;
+        
+        --popover: 0.20 0.09 15;
+        --popover-foreground: 0.98 0.01 15;
+        
+        /* Primary: Lighter burgundy for dark mode */
+        --primary: 0.55 0.22 15;
+        --primary-foreground: 0.98 0.01 15;
+        
+        --secondary: 0.28 0.10 15;
+        --secondary-foreground: 0.98 0.01 15;
+        
+        --muted: 0.25 0.09 15;
+        --muted-foreground: 0.70 0.03 15;
+        
+        --accent: 0.35 0.15 15;
+        --accent-foreground: 0.98 0.01 15;
+        
+        --destructive: 0.60 0.20 25;
+        --destructive-foreground: 0.98 0.01 15;
+        
+        --border: 0.30 0.10 15;
+        --input: 0.30 0.10 15;
+        --ring: 0.55 0.22 15;
+        
+        --chart-1: 0.55 0.16 15;
+        --chart-2: 0.60 0.14 340;
+        --chart-3: 0.50 0.11 30;
+        --chart-4: 0.65 0.09 200;
+        --chart-5: 0.45 0.18 350;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+    
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Custom scrollbar styling */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        @apply bg-muted/30;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        @apply bg-primary/50 rounded-full;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-primary/70;
+    }
+    
+    /* Smooth transitions for interactive elements */
+    button, a, [role="button"] {
+        transition: all 0.2s ease-in-out;
+    }
+    
+    /* Glow effect for buttons on hover */
+    button:hover:not(:disabled) {
+        box-shadow: 0 0 20px rgba(128, 0, 0, 0.3);
+    }
+}
+
+@layer utilities {
+    /* Animation utilities */
+    .animate-in {
+        animation-duration: 0.5s;
+        animation-fill-mode: both;
+    }
+    
+    .fade-in {
+        animation-name: fadeIn;
+    }
+    
+    .slide-in-from-bottom-4 {
+        animation-name: slideInFromBottom;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideInFromBottom {
+        from {
+            transform: translateY(1rem);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    /* Gradient backgrounds */
+    .gradient-maroon {
+        background: linear-gradient(135deg, oklch(var(--background)) 0%, oklch(var(--accent)) 100%);
+    }
+}
